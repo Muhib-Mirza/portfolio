@@ -1,13 +1,18 @@
 import style from "../styles/Navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {
   const [flag,setFlag] = useState(false);
   const handleClick = ()=>{
     setFlag(!flag);
+    if(flag === true){
+      document.querySelector(".section").style.filter = "blur(0)"
+    }else{
+      document.querySelector(".section").style.filter = "blur(1.2px)"
+    }
   }
   const parent = {
     initial:{
@@ -94,13 +99,16 @@ const Navbar = () => {
         initial={
           {
             translateX:"-100vw",
+            opacity:0,
           }
         }
         animate={
           flag ?{
             translateX:"0vw",
+            opacity:1,
           }:{
             translateX:"-100vw",
+            opacity:0,
           }
         }
         transition={{

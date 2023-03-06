@@ -1,0 +1,106 @@
+.section{
+    font-family: 'Roboto Mono', monospace;
+    width: 75vw;
+    margin: auto;
+    margin-top: 3rem;
+    color: #72fcdc;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.myn{
+    margin-left: 0.5rem;
+}
+.name{
+    color: #CCD6F6;
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.thing{
+    color: #CCD6F6;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.company{
+    width: 40rem;
+    font-size: medium;
+    color: rgba(255,255,255,0.5);
+}
+.compname{
+    text-decoration: none;
+    color: #72fcdc;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+}
+.compname:hover{
+    color: rgba(114, 252, 220, 0.8);
+}
+.resume {
+    margin-top: 1.5rem;
+    height: 4rem;
+    width: 13rem;
+    background-color: transparent;
+    color: #72fcdc;
+    font-family: 'Roboto Mono', monospace;
+    border: 1px solid #72fcdc;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .resume:hover {
+    background-color: rgba(114, 252, 220, 0.1);
+  }
+
+@media screen and (min-width:600px) and (max-width:800px) {
+    .company{
+        font-size: 15px;
+        margin-top: 1rem;
+        width: 29rem;
+    }
+}
+
+@media screen and (min-width:450px) and (max-width:600px) {
+    .name{
+        font-size: 3.5rem;
+    }
+    .thing{
+        font-size: 2.8rem;
+    }
+    .company{
+        font-size: 15px;
+        margin-top: 1rem;
+        width: 25rem;
+    }
+} 
+  
+@media screen and (min-width:400px) and (max-width:450px) {
+    .name{
+        font-size: 3rem;
+    }
+    .thing{
+        font-size: 2.3rem;
+    }
+    .company{
+        font-size: 13px;
+        margin-top: 1rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .name{
+        font-size: 2.6rem;
+    }
+    .thing{
+        font-size: 2rem;
+    }
+    .company{
+        font-size: 12px;
+        margin-top: 1rem;
+        width: 17rem;
+    }
+}

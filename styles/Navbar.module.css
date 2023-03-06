@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Roboto Mono', monospace;
+  font-size: small;
 }
 .navContainer {
   display: flex;
@@ -19,16 +21,20 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   display: flex;
-  flex-direction: row !important;
+  flex-direction: row;
   justify-content: center;
   width: 6rem;
   height: 36.89px;
   align-items: center;
   margin-left: 1rem;
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: small;
 }
 .linkTxt {
   transition: all 0.2s ease;
+  font-family: 'Roboto Mono', monospace;
+  font-size: small;
 }
 .linkTxt:hover {
   color: #72fcdc;
@@ -36,6 +42,8 @@
 .num {
   width: 1.9rem;
   color: #72fcdc;
+  font-family: 'Roboto Mono', monospace;
+  font-size: small;
 }
 .resume {
   margin-left: 1rem;
@@ -43,6 +51,7 @@
   width: 5rem;
   background-color: transparent;
   color: #72fcdc;
+  font-family: 'Roboto Mono', monospace;
   border: 1px solid #72fcdc;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -75,7 +84,6 @@
 .drawer{
   height: 100vh;
   width: min(65vw, 400px);
-  overflow-y: scroll;
   background-color: #0a192f;
   box-shadow: -5px -5px 5px #122c53;
   transition: all 0.2s ease-in-out;
@@ -85,6 +93,8 @@
   top: 0;
   color: white;
   display: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: small;
 }
 
 .title{
