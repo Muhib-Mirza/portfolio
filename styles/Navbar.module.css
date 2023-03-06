@@ -19,6 +19,7 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   display: flex;
+  flex-direction: row !important;
   justify-content: center;
   width: 6rem;
   height: 36.89px;
@@ -162,7 +163,7 @@
     flex-direction: column;
   }
   .link {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     justify-content: center;
   }
