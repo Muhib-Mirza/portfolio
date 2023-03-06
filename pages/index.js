@@ -27,9 +27,12 @@ export default function Home() {
           Upstatement.
         </motion.a>
         </div>
-        <a href="/" >
+        <a href="/" className={style.btnContainer} >
                 <button className={style.resume}>Check out my course!</button>
                 </a>
+      </div>
+      <div className={style.mailContainer}>
+        <a href="mailto:" className={style.gmail}> <span className={style.mail}> mirzamuhib8@gmail.com </span>  <hr className={style.mailLine} /></a>
       </div>
     </>
   );
