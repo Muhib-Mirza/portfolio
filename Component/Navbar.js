@@ -18,13 +18,13 @@ const Navbar = () => {
       transition:{
         type:"tween",
         duration:0.1,
-        staggerChilder:0.2,
+        staggerChildren:0.2,
       }
     }
   }
   const child = {
     initial:{
-      y:-10,
+      y:-40,
       opacity:0,
     },
     animate:{
@@ -32,7 +32,7 @@ const Navbar = () => {
       opacity:1,
       transition:{
         type:"tween",
-        duration:0.1,
+        duration:0.2,
       }
     }
   }
@@ -47,6 +47,7 @@ const Navbar = () => {
                 variants={parent}
                 initial="initial"
                 animate="animate"
+                
                 >
                 <motion.a href="#about" className={style.link} 
                 variants = {child}
@@ -58,34 +59,34 @@ const Navbar = () => {
                     About
                     </div>
                 </motion.a>
-                <a href="#about" className={style.link} >
+                <motion.a href="#about" className={style.link} variants = {child} >
                     <span className={style.num}>
                     02.
                     </span>
                     <div className={style.linkTxt} >
                     Experience
                     </div>
-                </a>
-                <a href="#about" className={style.link} >
+                </motion.a>
+                <motion.a href="#about" className={style.link} variants = {child} >
                     <span className={style.num}>
                         03.
                     </span>
                     <div className={style.linkTxt} >
                     Work
                     </div>
-                </a>
-                <a href="#about" className={style.link} >
+                </motion.a>
+                <motion.a href="#about" className={style.link} variants = {child} >
                     <span className={style.num}>
                     04.
                     </span>
                     <div className={style.linkTxt} >
                     Contact
                     </div>
-                </a>
+                </motion.a>
                 </motion.ol>
-                <a href="/">
+                <motion.a href="/" variants = {child}>
                 <button className={style.resume}>Resume</button>
-                </a>
+                </motion.a>
             </div>
             <GiHamburgerMenu className={style.drawerIcon} onClick={handleClick} />
         </nav>
@@ -155,7 +156,7 @@ const Navbar = () => {
               </div>
             </a>
             </li>
-          <a href="/">
+          <a href="/" >
                 <button className={style.resume}>Resume</button>
                 </a>
           </ul>
