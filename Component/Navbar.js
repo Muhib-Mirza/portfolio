@@ -9,6 +9,33 @@ const Navbar = () => {
   const handleClick = ()=>{
     setFlag(!flag);
   }
+  const parent = {
+    initial:{
+      opacity:0,
+    },
+    animate:{
+      opacity:1,
+      transition:{
+        type:"tween",
+        duration:0.1,
+        staggerChilder:0.2,
+      }
+    }
+  }
+  const child = {
+    initial:{
+      y:-10,
+      opacity:0,
+    },
+    animate:{
+      y:0,
+      opacity:1,
+      transition:{
+        type:"tween",
+        duration:0.1,
+      }
+    }
+  }
     return ( 
         <>
         <nav className={style.nav}>
@@ -16,15 +43,21 @@ const Navbar = () => {
                 <img src="/irfan.svg" alt="" className={style.avatar} />
             </div>
             <div className={style.navContainer}>
-                <ol className={style.linkContainer}>
-                <a href="#about" className={style.link} >
+                <motion.ol className={style.linkContainer}
+                variants={parent}
+                initial="initial"
+                animate="animate"
+                >
+                <motion.a href="#about" className={style.link} 
+                variants = {child}
+                >
                     <span className={style.num}>
                     01.
                     </span>
                     <div className={style.linkTxt} >
                     About
                     </div>
-                </a>
+                </motion.a>
                 <a href="#about" className={style.link} >
                     <span className={style.num}>
                     02.
@@ -49,7 +82,7 @@ const Navbar = () => {
                     Contact
                     </div>
                 </a>
-                </ol>
+                </motion.ol>
                 <a href="/">
                 <button className={style.resume}>Resume</button>
                 </a>
