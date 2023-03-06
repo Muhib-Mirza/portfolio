@@ -10,9 +10,6 @@ export default function Home() {
         <link rel="icon" href="/i.png" />
       </Head>
       <Navbar />
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde tempora cum, odit voluptatum, assumenda dolore reiciendis ipsa placeat velit totam et omnis officia ducimus accusamus cupiditate eligendi corporis laudantium!
-      </div>
     </>
   )
 }
