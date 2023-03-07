@@ -140,7 +140,7 @@ export default function Home() {
         </a>
       </motion.div>
       {/* About section */}
-      <div className={astyle.aboutContainer}>
+      <div className={astyle.aboutContainer} id="about">
         <motion.div className={astyle.aboutTextContainer} variants={aboutParent} initial="initial" 
         animate={
           aboutFlag ? "animate" : "initial"
@@ -152,7 +152,7 @@ export default function Home() {
         <motion.p className={`${astyle.para}`} variants={aboutChild} onViewportEnter={()=>setAboutFlag(true)}>
         Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
         </motion.p>
-        <motion.p className={`${astyle.para} ${astyle.para2}`} id="#about" variants={aboutChild}>
+        <motion.p className={`${astyle.para} ${astyle.para2}`} variants={aboutChild}>
         Fast-forward to today, and I’ve had the privilege of working at an
         <a href="/" className={astyle.compname}> advertising agency</a>,<a href="/" className={astyle.compname}> a start-up</a>,<a href="/" className={astyle.compname}> a huge corporation</a>,<a href="/" className={astyle.compname}> and a student-led design studio.</a> My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
         </motion.p>
