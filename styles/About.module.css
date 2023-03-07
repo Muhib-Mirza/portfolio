@@ -20,8 +20,8 @@
     color: #ccd6f6;
 }
 .aline{
-    width: 17rem;
-    margin-left: 2rem;
+    width: 15rem;
+    margin-left: 1rem;
     border: 1px solid rgba(255,255,255,0.2);
 }
 .para{
@@ -60,7 +60,6 @@
     }
     .aline{
         width: 12rem;
-        margin-left: 1rem;
     }
 }
 @media screen and (min-width:400px) and (max-width:500px) {
@@ -70,13 +69,11 @@
     }
     .aline{
         width: 9rem;
-        margin-left: 1rem;
     }
 }
 @media screen and (max-width:400px) {
     .aline{
         width: 7rem;
-        margin-left: 1rem;
     }
     .para{
         width: 17rem;
