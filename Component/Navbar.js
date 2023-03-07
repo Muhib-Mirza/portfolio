@@ -53,7 +53,6 @@ const Navbar = () => {
                 variants={parent}
                 initial="initial"
                 animate="animate"
-                
                 >
                 <motion.a href="#about" className={style.link} 
                 variants = {child}

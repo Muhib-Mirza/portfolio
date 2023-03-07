@@ -2,6 +2,7 @@ import Navbar from "@/Component/Navbar";
 import Head from "next/head";
 import style from "../styles/Home.module.css";
 import { motion } from "framer-motion";
+import astyle from "../styles/About.module.css"
 import { useState } from "react";
 
 export default function Home() {
@@ -34,6 +35,34 @@ export default function Home() {
       },
     },
   };
+  const aboutParent={
+    initial:{
+      opacity:0
+    },
+    animate:{
+      opacity:1,
+      transition:{
+        type:"tween",
+        duration:0.2,
+        staggerChildren:0.4,
+      }
+    }
+  }
+  const aboutChild ={
+    initial:{
+      opacity:0,
+      y:50
+    },
+    animate:{
+      opacity:1,
+      y:0,
+      transition:{
+        type:"tween",
+        duration:0.2,
+      }
+    }
+  }
+  const [aboutFlag,setAboutFlag] = useState(false);
   return (
     <>
       <Head>
@@ -68,6 +97,7 @@ export default function Home() {
             Upstatement.
           </a>
         </motion.div>
+        {/* GMAIL Container */}
         <a href="/" className={style.btnContainer}>
           <motion.button
             className={style.resume}
@@ -109,216 +139,34 @@ export default function Home() {
           <hr className={style.mailLine} />
         </a>
       </motion.div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-        repellendus quia ullam? Distinctio quae a explicabo vero blanditiis
-        voluptas esse sint quis voluptatibus, ab eligendi maiores quo pariatur
-        hic perferendis? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fuga repellendus quia ullam? Distinctio quae a explicabo vero
-        blanditiis voluptas esse sint quis voluptatibus, ab eligendi maiores quo
-        pariatur hic perferendis? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Fuga repellendus quia ullam? Distinctio quae a
-        explicabo vero blanditiis voluptas esse sint quis voluptatibus, ab
-        eligendi maiores quo pariatur hic perferendis? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga repellendus quia ullam?
-        Distinctio quae a explicabo vero blanditiis voluptas esse sint quis
-        voluptatibus, ab eligendi maiores quo pariatur hic perferendis? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quia
-        ullam? Distinctio quae a explicabo vero blanditiis voluptas esse sint
-        quis voluptatibus, ab eligendi maiores quo pariatur hic perferendis?
+      {/* About section */}
+      <div className={astyle.aboutContainer}>
+        <motion.div className={astyle.aboutTextContainer} variants={aboutParent} initial="initial" 
+        animate={
+          aboutFlag ? "animate" : "initial"
+        }
+        >
+        <motion.div className={astyle.about} variants={aboutChild}>
+          <span>01.</span> <span className={astyle.aboutHead}>About Me</span> <hr className={astyle.aline} />
+        </motion.div>
+        <motion.p className={`${astyle.para}`} variants={aboutChild} onViewportEnter={()=>setAboutFlag(true)}>
+        Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+        </motion.p>
+        <motion.p className={`${astyle.para} ${astyle.para2}`} id="#about" variants={aboutChild}>
+        Fast-forward to today, and I’ve had the privilege of working at an
+        <a href="/" className={astyle.compname}> advertising agency</a>,<a href="/" className={astyle.compname}> a start-up</a>,<a href="/" className={astyle.compname}> a huge corporation</a>,<a href="/" className={astyle.compname}> and a student-led design studio.</a> My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+        </motion.p>
+        <motion.p className={`${astyle.para} ${astyle.para2}`} variants={aboutChild}>
+        I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+        </motion.p>
+        <motion.p className={`${astyle.para} ${astyle.para2}`} variants={aboutChild}>
+        Here are a few technologies I’ve been working with recently:
+        </motion.p>
+        </motion.div>
       </div>
+      <div id="experience">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur suscipit id sint error labore quae ducimus veritatis perspiciatis quasi assumenda, fuga eum ut rerum soluta voluptas reprehenderit voluptatem a itaque.</div>
+      <div id="work">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla earum nisi eligendi, illo distinctio cum libero aut magni ipsa obcaecati incidunt minus nobis repellat debitis laudantium rem mollitia recusandae sapiente.</div>
+      <div id="contact">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis doloremque sequi, necessitatibus laborum nemo dolore aspernatur labore aperiam quam, perferendis dolorum in maiores eum, molestiae maxime tempora esse ipsa nam.</div>
     </>
   );
 }
