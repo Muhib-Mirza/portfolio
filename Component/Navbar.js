@@ -41,9 +41,10 @@ const Navbar = () => {
       }
     }
   }
+    
     return ( 
         <>
-        <nav className={style.nav}>
+        <motion.nav className={style.nav} >
         <div className={style.circleAvatar}>
                 <img src="/irfan.svg" alt="" className={style.avatar} />
             </div>
@@ -89,12 +90,25 @@ const Navbar = () => {
                     </div>
                 </motion.a>
                 </motion.ol>
-                <motion.a href="/" variants = {child}>
+                <motion.a href="/" initial={{
+                  opacity:0,
+                  y:-40
+                }}
+                animate={{
+                  opacity:1,
+                  y:0
+                }}
+                transition={{
+                  delay:0.8,
+                  type:"tween",
+                  duration:0.2
+                }}
+                >
                 <button className={style.resume}>Resume</button>
                 </motion.a>
             </div>
             <GiHamburgerMenu className={style.drawerIcon} onClick={handleClick} />
-        </nav>
+        </motion.nav>
         <motion.div className={ style.drawer }
         initial={
           {

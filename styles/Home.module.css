@@ -60,11 +60,12 @@
 
 /* Mail Code */
 .mailContainer {
-    position: sticky;
+    position: fixed;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transform: translate(7rem,-6rem);
+    transform: translate(9rem,-6rem);
 }
 .gmail {
   text-decoration: none;
@@ -141,17 +142,17 @@
 /* Mail Responsive */
 @media screen and (max-width:1000px) and (min-width:920px) {
  .mailContainer{
-    transform: translate(8rem,-6rem);
+    transform: translate(10rem,-6rem);
  }   
 }
 @media screen and (max-width:920px) and (min-width:860px) {
     .mailContainer{
-        transform: translate(10rem,-6rem);
+        transform: translate(11rem,-6rem);
     }
 }
 @media screen and (max-width:860px) and (min-width:770px) {
     .mailContainer{
-        transform: translate(11rem,-6rem);
+        transform: translate(12rem,-6rem);
     }
 }
 @media screen and (max-width:770px) {
