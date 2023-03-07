@@ -50,7 +50,10 @@
     }
     .aline{
         width: 14rem;
-        margin-left: 1rem;
+        margin-left: 1.2rem;
+    }
+    .aboutTextContainer{
+        font-size: 1rem;
     }
   }
 @media screen and (min-width:500px) and (max-width:600px) {
@@ -61,6 +64,9 @@
     .aline{
         width: 12rem;
     }
+    .aboutTextContainer{
+        font-size: 1.2rem;
+    }
 }
 @media screen and (min-width:400px) and (max-width:500px) {
     .para{
@@ -70,8 +76,14 @@
     .aline{
         width: 9rem;
     }
+    .aboutTextContainer{
+        font-size: 1.2rem;
+    }
 }
 @media screen and (max-width:400px) {
+    .aboutTextContainer{
+        font-size: 1.2rem;
+    }
     .aline{
         width: 7rem;
     }
