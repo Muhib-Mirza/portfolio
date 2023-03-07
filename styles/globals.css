@@ -14,3 +14,12 @@ body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+.ant-drawer-title{
+  font-family: 'Roboto Mono', monospace !important;
+  margin-left: 1rem !important;
+  color: white !important;
+}
+.ant-drawer-close{
+  color: white !important;
+}

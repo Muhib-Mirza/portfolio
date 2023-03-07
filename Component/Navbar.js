@@ -3,16 +3,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Drawer } from "antd";
 
 const Navbar = () => {
   const [flag,setFlag] = useState(false);
   const handleClick = ()=>{
     setFlag(!flag);
-    if(flag === true){
-      document.querySelector(".section").style.filter = "blur(0)"
-    }else{
-      document.querySelector(".section").style.filter = "blur(1.2px)"
-    }
   }
   const parent = {
     initial:{
@@ -106,8 +102,60 @@ const Navbar = () => {
                 <button className={style.resume}>Resume</button>
                 </motion.a>
             </div>
-            <GiHamburgerMenu className={style.drawerIcon} onClick={handleClick} />
+        <GiHamburgerMenu className={style.drawerIcon} onClick={handleClick} />
         </motion.nav>
+        <Drawer className={style.drawer}
+        open={flag}
+        onClose={()=>{setFlag(!flag)}}
+        title="Irfan Haider"
+        >
+          <ul className={style.list}>
+            <li className={style.listTile}>
+            <a href="#about" className={style.link}>
+            <span className={style.num}>
+                    01.
+                    </span>
+              <div className={style.headHome} onClick={()=>setFlag(!flag)}>
+              About
+              </div>
+            </a>
+            </li>
+            <li className={style.listTile}>
+            <a href="#experience" className={style.link}>
+            <span className={style.num}>
+                    02.
+                    </span>
+              <div className={`${style.headHome} ${style.propt}`} onClick={()=>setFlag(!flag)}>
+              Experience
+              </div>
+            </a>
+            </li>
+            <li className={style.listTile}>
+            <a href="#work" className={style.link}>
+            <span className={style.num}>
+                    03.
+                    </span>
+              <div className={style.headHome} onClick={()=>setFlag(!flag)}>
+              Work
+              </div>
+            </a>
+            </li>
+            <li className={style.listTile}>
+            <a href="#contact" className={style.link}>
+            <span className={style.num}>
+                    04.
+                    </span>
+              <div className={`${style.headHome} ${style.propt}`} onClick={()=>setFlag(!flag)} >
+              Contact
+              </div>
+            </a>
+            </li>
+          <a href="/" >
+                <button className={style.resume} onClick={()=>setFlag(!flag)}>Resume</button>
+                </a>
+          </ul>
+          </Drawer>
+            {/* 
         <motion.div className={ style.drawer }
         initial={
           {
@@ -181,7 +229,7 @@ const Navbar = () => {
                 <button className={style.resume}>Resume</button>
                 </a>
           </ul>
-        </motion.div>
+        </motion.div> */}
         </>
      );
 }
