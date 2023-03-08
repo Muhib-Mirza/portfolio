@@ -164,20 +164,40 @@ export default function Home() {
         Here are a few technologies I’ve been working with recently:
         </motion.p>
         </motion.div>
-        <div className={astyle.imageContainer}>
+        <motion.div className={astyle.imageContainer} initial={{
+          opacity:0,
+          y:50
+        }} 
+        animate={ 
+          aboutFlag ?
+          {
+          opacity:1,
+          y:0
+        }
+        :{
+          opacity:0,
+          y:50
+        }
+      }
+        transition={{
+          type:"tween",
+          duration:0.2,
+          delay:1.4
+        }}
+        >
           <img src="/irfan.jpeg" alt="Irfan" className={astyle.avatar} onMouseEnter={()=>setGreenBox(true)} onMouseLeave={()=>setGreenBox(false)} />
           <motion.div className={astyle.border}
           initial={{
             top:"1rem",
-            marginLeft:"2rem"
+            marginLeft:"1rem"
           }}
           animate={
             greenBox ? {
               top:"0.5rem",
-              marginLeft:"1rem",
+              marginLeft:"0.5rem",
             } : {
               top:"1rem",
-              marginLeft:"2rem",
+              marginLeft:"1rem",
             }
           }
           transition={{
@@ -186,7 +206,7 @@ export default function Home() {
             ease:"easeInOut"
           }}
           ></motion.div>
-        </div>
+        </motion.div>
       </div>
       <div id="experience">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur suscipit id sint error labore quae ducimus veritatis perspiciatis quasi assumenda, fuga eum ut rerum soluta voluptas reprehenderit voluptatem a itaque.</div>
       <div id="work">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla earum nisi eligendi, illo distinctio cum libero aut magni ipsa obcaecati incidunt minus nobis repellat debitis laudantium rem mollitia recusandae sapiente.</div>

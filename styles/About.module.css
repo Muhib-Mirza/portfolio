@@ -1,8 +1,8 @@
 /* About text */
 .aboutContainer {
-    width: 85vw;
+    width: 75vw;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 5rem;
     transition: all 0.2s ease;
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +50,7 @@
 
   /* About Image */
 .imageContainer{
-    margin-left: 2rem;
+    margin-left: 1rem;
     position: relative;
 }
 
@@ -160,4 +160,25 @@
         margin-left: 0;
     }
     
+}
+
+@media screen and (max-width:1090px) and (mix-width:1050px) {
+    .aboutContainer{
+        width: 78vw;
+    }
+}
+@media screen and (max-width:1050px) and (min-width:1020px) {
+    .aboutContainer{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:1020px) and (min-width:1000px) {
+    .aboutContainer{
+        width: 82vw;
+    }
+}
+@media screen and (max-width:1000px) {
+    .aboutContainer{
+        width: 84vw;
+    }
 }
