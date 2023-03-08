@@ -1,13 +1,12 @@
 .section {
-  font-family: "Roboto Mono", monospace;
-  width: 75vw;
+  width: 80vw;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   color: #72fcdc;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
 }
 .myn {
   margin-left: 0.5rem;
@@ -20,16 +19,20 @@
   font-family: "Nunito Sans", sans-serif;
 }
 .thing {
-  color: #ccd6f6;
-  font-size: 3.5rem;
+  color:  rgba(204,214,246,0.8);
+  font-size:  69.64px;
+  line-height: 0.9;
   font-weight: bolder;
-  margin-top: 1rem;
+  margin-top: 5px;
   font-family: "Nunito Sans", sans-serif;
 }
 .company {
-  width: 40rem;
-  font-size: medium;
+  max-width: 540px;
+  font-size: 18px;
   color: rgb(136, 146, 176);
+  line-height: 26px;
+  font-family: Calibri;
+  margin-top: 2rem;
 }
 .compname {
   text-decoration: none;
@@ -44,7 +47,7 @@
   width: 13rem;
 }
 .resume {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   height: 4rem;
   width: 13rem;
   background-color: transparent;
@@ -66,12 +69,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transform: translate(9rem,-6rem);
+    transform: translate(7rem,-18rem);
 }
 .gmail {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   transform: rotate(90deg);
@@ -90,15 +93,29 @@
 }
 
 /* Info Responsive */
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (max-width:900px) and (min-width:800px) {
+  .section{
+    width: 77vw;
+    height: 90vh;
+    margin: auto;
+    margin-top: 3rem;
+  }
   .company {
-    font-size: 15px;
     margin-top: 1rem;
-    width: 29rem;
   }
 }
-
-@media screen and (min-width: 450px) and (max-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .company {
+    margin-top: 1rem;
+  }
+  .section{
+    width: 77vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width:600px) and (min-width:500px) {
   .name {
     font-size: 3.5rem;
   }
@@ -106,9 +123,30 @@
     font-size: 2.8rem;
   }
   .company {
-    font-size: 15px;
     margin-top: 1rem;
-    width: 25rem;
+
+  }
+  .section{
+    width: 77vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 500px) {
+  .name {
+    font-size: 3.5rem;
+  }
+  .thing {
+    font-size: 2.8rem;
+  }
+  .company {
+    margin-top: 1rem;
+  }
+  .section{
+    width: 87vw;
+    height: 100vh;
+    margin-top: 3rem;
   }
 }
 
@@ -120,9 +158,12 @@
     font-size: 2.3rem;
   }
   .company {
-    font-size: 13px;
     margin-top: 1rem;
-    width: 18rem;
+  }
+  .section{
+    width: 87vw;
+    height: 97vh;
+    margin-top: 3rem;
   }
 }
 
@@ -130,30 +171,32 @@
   .name {
     font-size: 2.6rem;
   }
-  .thing {
-    font-size: 2rem;
-  }
   .company {
-    font-size: 12px;
     margin-top: 1rem;
-    width: 17rem;
+  }
+  .section{
+    height: 95vh;
+    margin-top: 0.5rem;
+  }
+  .thing{
+    font-size: 40px
   }
 }
 
 /* Mail Responsive */
 @media screen and (max-width:1000px) and (min-width:920px) {
  .mailContainer{
-    transform: translate(10rem,-6rem);
+    transform: translate(8rem,-17rem);
  }   
 }
 @media screen and (max-width:920px) and (min-width:860px) {
     .mailContainer{
-        transform: translate(11rem,-6rem);
+        transform: translate(9rem,-17rem);
     }
 }
 @media screen and (max-width:860px) and (min-width:770px) {
     .mailContainer{
-        transform: translate(12rem,-6rem);
+        transform: translate(10rem,-17rem);
     }
 }
 @media screen and (max-width:770px) {
