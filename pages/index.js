@@ -163,14 +163,14 @@ export default function Home() {
         <motion.p className={`${astyle.para} ${astyle.para2}`} variants={aboutChild}>
         Here are a few technologies I’ve been working with recently:
         </motion.p>
-        <ul className={astyle.list}>
+        <motion.ul className={astyle.list} variants={aboutChild}>
           <li className={astyle.listData}>JavaScript</li>
           <li className={astyle.listData}>React</li>
           <li className={astyle.listData}>Node.js</li>
           <li className={astyle.listData}>TypeScript</li>
           <li className={astyle.listData}>Eleventy</li>
           <li className={astyle.listData}>WordPress</li>
-        </ul>
+        </motion.ul>
         </motion.div>
         <motion.div className={astyle.imageContainer} initial={{
           opacity:0,
