@@ -1,9 +1,12 @@
+/* About text */
 .aboutContainer {
-    width: 75vw;
+    width: 85vw;
     margin: auto;
     margin-top: 3rem;
     transition: all 0.2s ease;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .aboutTextContainer{
     display: flex;
@@ -44,7 +47,44 @@
   .compname:hover {
     color: rgba(114, 252, 220, 0.8);
   }
-  @media screen and (min-width:600px) and (max-width:800px) {
+
+  /* About Image */
+.imageContainer{
+    margin-left: 2rem;
+    position: relative;
+}
+
+.avatar{
+    width: 16rem;
+}
+.border{
+    width: 16rem;
+    height: 16rem;
+    border: 3px solid rgba(114, 252, 220, 1);
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 1rem;
+    margin-left: 2rem;
+    z-index: -1;
+}
+  /* About Text Responsive */
+  @media screen and (max-width:980px) and (min-width:930px) {
+   .para{
+    width: 30rem;
+   } 
+  }
+  @media screen and (max-width:930px) and (min-width:880px) {
+    .para{
+        width: 28rem;
+    }
+  }
+  @media screen and (max-width:880px) and (min-width:810px) {
+    .para{
+        width: 25rem;
+        font-size: 16px;
+    }
+  }
+  @media screen and (min-width:600px) and (max-width:810px) {
     .para{
         width: 29rem;
     }
@@ -52,8 +92,15 @@
         width: 14rem;
         margin-left: 1.2rem;
     }
+    .aboutContainer{
+        justify-content: center;
+    }
     .aboutTextContainer{
         font-size: 1rem;
+    }
+    .imageContainer{
+        margin-top: 2rem;
+        margin-left: 0;
     }
   }
 @media screen and (min-width:500px) and (max-width:600px) {
@@ -67,6 +114,13 @@
     .aboutTextContainer{
         font-size: 1.2rem;
     }
+    .aboutContainer{
+        justify-content: center;
+    }
+    .imageContainer{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }
 @media screen and (min-width:400px) and (max-width:500px) {
     .para{
@@ -78,6 +132,13 @@
     }
     .aboutTextContainer{
         font-size: 1.2rem;
+    }
+    .aboutContainer{
+        justify-content: center;
+    }
+    .imageContainer{
+        margin-top: 2rem;
+        margin-left: 0;
     }
 }
 @media screen and (max-width:400px) {
@@ -91,4 +152,12 @@
         width: 17rem;
         font-size: 15px;
     }
+    .aboutContainer{
+        justify-content: center;
+    }
+    .imageContainer{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    
 }

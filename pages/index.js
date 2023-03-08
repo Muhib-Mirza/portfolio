@@ -63,6 +63,7 @@ export default function Home() {
     }
   }
   const [aboutFlag,setAboutFlag] = useState(false);
+  const [greenBox,setGreenBox] = useState(false);
   return (
     <>
       <Head>
@@ -163,6 +164,29 @@ export default function Home() {
         Here are a few technologies I’ve been working with recently:
         </motion.p>
         </motion.div>
+        <div className={astyle.imageContainer}>
+          <img src="/irfan.jpeg" alt="Irfan" className={astyle.avatar} onMouseEnter={()=>setGreenBox(true)} onMouseLeave={()=>setGreenBox(false)} />
+          <motion.div className={astyle.border}
+          initial={{
+            top:"1rem",
+            marginLeft:"2rem"
+          }}
+          animate={
+            greenBox ? {
+              top:"0.5rem",
+              marginLeft:"1rem",
+            } : {
+              top:"1rem",
+              marginLeft:"2rem",
+            }
+          }
+          transition={{
+            type:"tween",
+            duration:0.2,
+            ease:"easeInOut"
+          }}
+          ></motion.div>
+        </div>
       </div>
       <div id="experience">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur suscipit id sint error labore quae ducimus veritatis perspiciatis quasi assumenda, fuga eum ut rerum soluta voluptas reprehenderit voluptatem a itaque.</div>
       <div id="work">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla earum nisi eligendi, illo distinctio cum libero aut magni ipsa obcaecati incidunt minus nobis repellat debitis laudantium rem mollitia recusandae sapiente.</div>
