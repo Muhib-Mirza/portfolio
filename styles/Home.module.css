@@ -2,11 +2,12 @@
   font-family: "Roboto Mono", monospace;
   width: 75vw;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   color: #72fcdc;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 .myn {
   margin-left: 0.5rem;

@@ -2,7 +2,6 @@
 .aboutContainer {
     width: 75vw;
     margin: auto;
-    margin-top: 5rem;
     transition: all 0.2s ease;
     display: flex;
     flex-wrap: wrap;
